@@ -4,12 +4,12 @@ const tabs = (parentSelector, tabSelector, contentSelector, activeClass, display
           content = document.querySelectorAll(contentSelector);
 
     function hideTabContent() {
-        content.forEach(tab => {
-            tab.style.display = 'none';
+        content.forEach(item => {
+            item.style.display = 'none';
         });
 
-        tabs.forEach(tab => {
-            tab.classList.remove(activeClass);
+        tabs.forEach(item => {
+            item.classList.remove(activeClass);
         });
     }
 
