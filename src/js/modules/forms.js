@@ -24,12 +24,12 @@ const forms = () => {
 
         return await res.text();
     };
-
-        const clearInputs = () => {
-            inputs.forEach(item => {
-                item.value = '';
-            });
-        };
+ 
+    const clearInputs = () => {
+        inputs.forEach(item => {
+            item.value = '';
+        });
+    };
 
     form.forEach(item => {
         item.addEventListener('submit', (e) => {

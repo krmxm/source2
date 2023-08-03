@@ -829,7 +829,10 @@ textarea:focus {
 /*Modals*/
 .popup,
 .popup_engineer,
-.popup_calc_end {
+.popup_calc,
+.popup_calc_profile,
+.popup_calc_end
+ {
   /* display: none; */
   position: fixed;
   top: 0;
@@ -845,6 +848,8 @@ textarea:focus {
 
 .popup.active,
 .popup_engineer.active,
+.popup_calc.active,
+.popup_calc_profile.active,
 .popup_calc_end.active {
   opacity: 1;
   visibility: visible;
@@ -897,7 +902,7 @@ textarea:focus {
   background: transparent;
 }
 
-.popup_calc {
+/* .popup_calc {
   display: none;
   position: fixed;
   top: 0;
@@ -906,7 +911,7 @@ textarea:focus {
   height: 100%;
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.5);
-}
+} */
 
 .popup_calc_content {
   position: fixed;
@@ -939,6 +944,7 @@ textarea:focus {
 
 .popup_calc_content .big_img img {
   display: none;
+  /* margin: 0 auto; */
   margin-bottom: 3rem;
   width: 30rem;
 }
@@ -985,7 +991,7 @@ textarea:focus {
   padding: 1rem 5rem;
 }
 
-.popup_calc_profile {
+/* .popup_calc_profile {
   display: none;
   position: fixed;
   top: 0;
@@ -994,7 +1000,7 @@ textarea:focus {
   height: 100%;
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.5);
-}
+} */
 
 .popup_calc_profile_content {
   position: fixed;
