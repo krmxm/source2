@@ -29,6 +29,13 @@ const forms = (state) => {
         });
     };
 
+    const clearState = () => {
+        state = {
+            form: 1,
+            type: "tree"
+        };
+    };
+
     form.forEach(item => {
         item.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -52,8 +59,14 @@ const forms = (state) => {
                 .catch(() => statusMessage.textContent = message.failure)
                 .finally(() => {
                     clearInputs();
+                    clearState();
+                    // Object.keys(state).forEach(key => delete state[key]); //!!!
                     setTimeout(() => {
                         statusMessage.remove();
+                        document.querySelectorAll('[data-modal]').forEach(item => {
+                            item.classList.remove('active');
+                            document.body.style.overflow = '';
+                        });
                     }, 5000);
                 });
         });

@@ -16,7 +16,7 @@ const changeModalState = (state) => {
             item.addEventListener(event, () => {
                 switch(item.nodeName) {
                     case 'SPAN':
-                        state[prop] = i;
+                        state[prop] = i + 1;
                     break;
                     case 'INPUT':
                         if(item.getAttribute('type') === 'checkbox') {
@@ -43,7 +43,7 @@ const changeModalState = (state) => {
     bindActionToElems('input', windowWidth, 'width');
     bindActionToElems('input', windowHeight, 'height');
     bindActionToElems('change', windowType, 'type');
-    bindActionToElems('change', windowProfile, 'height');
+    bindActionToElems('change', windowProfile, 'profile');
 
 
 };

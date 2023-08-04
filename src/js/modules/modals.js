@@ -1,4 +1,4 @@
-const modals = () => {
+const modals = (state) => {
 
     function openModal(modal) {
         modal.classList.add('active');
@@ -21,6 +21,18 @@ const modals = () => {
             btn.addEventListener('click', (e) => {
                 if (e.target) {
                     e.preventDefault();
+                }
+
+                if(modal.classList.contains('popup_calc_profile')) {
+                    if(!state.form || !state.width || !state.height) {
+                        e.removeEventListener();
+                    }
+                }
+
+                if(modal.classList.contains('popup_calc_end')) {
+                    if(!state.type || !state.profile) {
+                        e.removeEventListener();
+                    }
                 }
 
                 windows.forEach(item => {
