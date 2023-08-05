@@ -18,6 +18,20 @@ body {
   color: red;
 }
 
+.faded {
+  animation-name: faded;
+  animation-duration: 0.4s;
+}
+
+@keyframes faded {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -831,9 +845,10 @@ textarea:focus {
 .popup_engineer,
 .popup_calc,
 .popup_calc_profile,
-.popup_calc_end
+.popup_calc_end,
+.popup_img
  {
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -841,18 +856,18 @@ textarea:focus {
   height: 100%;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
-  visibility: hidden;
-  opacity: 0;
-  transition: all .3s ease-in-out;
+  /* visibility: hidden; */
+  /* opacity: 0; */
+  /* transition: all .3s ease-in-out; */
 }
 
 .popup.active,
 .popup_engineer.active,
 .popup_calc.active,
 .popup_calc_profile.active,
-.popup_calc_end.active {
-  opacity: 1;
-  visibility: visible;
+.popup_calc_end.active,
+.popup_img.active {
+  display: block;
 }
 
 .myimage {
@@ -1321,6 +1336,11 @@ textarea:focus {
 
   .contacts_info {
     margin-top: 3rem;
+  }
+
+  .timer1 {
+    display: block;
+    margin: 0 auto;
   }
 
   .feedback_block h3 {
@@ -1817,6 +1837,19 @@ textarea:focus {
 
   .popup_calc_profile_button {
     padding: 1rem 5rem;
+  }
+
+  .timer1 {
+    padding: 5px;
+    width: auto;
+  }
+  .container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .numbers1 {
+    margin: 0 auto;
   }
 }
 

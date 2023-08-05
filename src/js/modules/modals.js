@@ -1,13 +1,20 @@
+import calcScroll from "./calcScroll";
+
 const modals = (state) => {
+
+    const scroll = calcScroll();
 
     function openModal(modal) {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
+        document.body.style.marginRight = `${scroll}px`;
     }
 
     function closeModal (modal) {
         modal.classList.remove('active');
         document.body.style.overflow = '';
+        document.body.style.marginRight = `0px`;
+
 
     }
 
@@ -67,6 +74,7 @@ const modals = (state) => {
             document.body.style.overflow = 'hidden';
         }, time);
     }
+
 
     bindModal('.popup_engineer_btn', '.popup_engineer', '.popup_engineer .popup_close');
     bindModal('.phone_link', '.popup', '.popup .popup_close');

@@ -66,6 +66,7 @@ const forms = (state) => {
                         document.querySelectorAll('[data-modal]').forEach(item => {
                             item.classList.remove('active');
                             document.body.style.overflow = '';
+                            document.body.style.marginRight = `0px`;
                         });
                     }, 5000);
                 });
