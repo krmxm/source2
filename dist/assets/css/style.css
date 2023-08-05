@@ -32,6 +32,21 @@ body {
   }
 }
 
+
+.fade-out {
+  animation-name: fadeOut;
+  animation-duration: 5s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
 a:hover {
   text-decoration: none;
 }

@@ -14,8 +14,6 @@ const modals = (state) => {
         modal.classList.remove('active');
         document.body.style.overflow = '';
         document.body.style.marginRight = `0px`;
-
-
     }
 
     function bindModal (triggerSelector, modalSelector, closeSelector, closeClickOverlay = true) {
